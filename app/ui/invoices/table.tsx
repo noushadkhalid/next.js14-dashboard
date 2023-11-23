@@ -4,6 +4,15 @@ import InvoiceStatus from '@/app/ui/invoices/status';
 import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
 import { fetchFilteredInvoices } from '@/app/lib/data';
 
+type Image = {
+  src: string;
+  alt: string;
+  className: string;
+  width: number;
+  height: number;
+  // other properties...
+};
+
 export default async function InvoicesTable({
   query,
   currentPage,
