@@ -6,6 +6,7 @@ import { fetchFilteredInvoices } from '@/app/lib/data';
 
 
 
+
 export default async function InvoicesTable({
   query,
   currentPage,
@@ -33,7 +34,7 @@ export default async function InvoicesTable({
                         className="mr-2 rounded-full"
                         width={28}
                         height={28}
-                        alt='Invoice Image'
+                        alt={`${invoice.name}'s profile picture` as string}
                      
                       />
                       <p>{invoice.name}</p>
@@ -93,7 +94,7 @@ export default async function InvoicesTable({
                         className="rounded-full"
                         width={28}
                         height={28}
-                        alt='Invoice Image'
+                        alt={`${invoice.name}'s profile picture` as string}
                       />
                       <p>{invoice.name}</p>
                     </div>
